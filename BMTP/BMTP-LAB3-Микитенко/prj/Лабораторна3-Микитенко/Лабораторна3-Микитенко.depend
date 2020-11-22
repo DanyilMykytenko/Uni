@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1603909171 source:c:\cb\bmtp-lab3-Микитенко\prj\Лабораторна3-Микитенко\main.c
+	<stdio.h>
+	<locale.h>
+
