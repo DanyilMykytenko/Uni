@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1606414204 source:c:\ws\uni\bmtp\bmtp-lab5-Микитенко\prj\example-5-1\main.c
+	<stdio.h>
+	<stdlib.h>
+
