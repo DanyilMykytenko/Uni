@@ -5,34 +5,40 @@
 int main()
 {
     char *locale = setlocale(LC_ALL, "");
-    char n;
-    short k, c;
+    char e;
+    short n = 0, k = 0, c = 0;
+    printf("Призначення алгоритму - підрахувати кількість чисел, що менші за 1024\n");
+    printf("Розробник - Микитенко Даниїл Юрійович, електрона скринька: freezeee682@gmail.com\n");
+    printf("Версія розробки - 1.0 2020 року\n\n");
     for(;;)
     {
-        printf("Введіть кількість чисел, які ви хочете задати:\n");
-        scanf("%c", n);
-        if ( n > 100 && n < 1)
+        printf("Введіть кількість чисел, які ви хочете задати: ");
+        scanf("%hu", &n);
+        if ( n > 100 || n < 1)
         {
-            printf("Помилка: неправильний ввод...");
+            printf("\nПомилка: неправильний ввод...\n\n");
             return 0;
         }
-        for(int i = 0; i < n; n++)
+        for(int i = 0; i < n; i++)
         {
-            printf("Введіть число № %c:");
-            scanf("%d", k);
-            if (k < 1024) c++;
+            printf("Введіть число № %d: ", i+1);
+            scanf("%hu", &k);
+            if (k < 1024)
+                c++;
         }
-        printf("Кількість чисел, що менше за 1024, становить: %d", c);
-        getch();
-        printf("Якщо ви хочете вийти із програми, натисніть J або L");
-        scanf("%c", n);
-        switch (n)
+        printf("\nКількість чисел, що менше за 1024, становить: %d", c);
+        printf("\nЯкщо ви хочете вийти із програми, натисніть J або L\n");
+        scanf("%c", &e);
+        scanf("%c", &e);
+        switch (e)
         {
             case 'J':
-                break;
+                return 0;
             case 'L':
-                break;
+                return 0;
+            default:
+                continue;
         }
+        getch();
     }
-    return 0;
 }
