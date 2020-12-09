@@ -27,14 +27,17 @@ int main()
                 c++;
         }
         printf("\nКількість чисел, що менше за 1024, становить: %d", c);
+        c = 0;
         printf("\nЯкщо ви хочете вийти із програми, натисніть J або L\n");
         scanf("%c", &e);
         scanf("%c", &e);
         switch (e)
         {
             case 'J':
+                printf("Програма закінчила свою роботу.");
                 return 0;
             case 'L':
+                printf("Програма закінчила свою роботу.");
                 return 0;
             default:
                 continue;
