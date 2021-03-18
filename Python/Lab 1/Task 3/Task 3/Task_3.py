@@ -2,7 +2,7 @@ import random
 
 i = int(0)
 numbers = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-negativeNumbers = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+negativeNumbers = []
 while i < 10:
     numbers[i] = int(random.uniform(-10, 10))
     i += 1
@@ -14,7 +14,7 @@ while i < 10:
     if numbers[i] < min:
         min = numbers[i]
     if numbers[i] < 0:
-        negativeNumbers[i] = numbers[i]
+        negativeNumbers.append(numbers[i])
     if numbers[i] % 2 == 0:
         k += 1
         oddSum += numbers[i]
@@ -24,6 +24,6 @@ print("Максимальный отрицательный элемент мас
 print("Среднее арифметическое нечётных чисел равно ", oddSum / k)
 print("Все отрицательные элементы: ")
 i = int(0)
-while i < 10:
+while i < len(negativeNumbers):
     print(negativeNumbers[i])
     i += 1
